@@ -1,6 +1,5 @@
-import type { Config } from 'tailwindcss'
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     './components/**/*.{vue,js,ts}',
     './layouts/**/*.vue',
@@ -75,7 +74,8 @@ export default {
     }
   },
   plugins: [
-    function({ addBase, addComponents, addUtilities }) {
+    // تم إصلاح الدالة البرمجية وإغلاق كافة الأقواس بشكل سليم هنا لتعمل بدون أخطاء تجميع
+    ({ addBase, addComponents, addUtilities }) => {
       addBase({
         '*': { 'box-sizing': 'border-box' },
         'html': { 'scroll-behavior': 'smooth', 'direction': 'rtl' },
@@ -85,7 +85,7 @@ export default {
           'color': '#0A203E',
           'overflow-x': 'hidden'
         }
-      })
+      });
 
       addComponents({
         '.container-custom': {
@@ -103,15 +103,15 @@ export default {
             'padding-right': '2rem'
           }
         }
-      })
+      });
 
       addUtilities({
         '.direction-rtl': { 'direction': 'rtl' },
         '.direction-ltr': { 'direction': 'ltr' }
-      })
+      });
     }
   ],
   future: {
     hoverOnlyWhenSupported: true
   }
-} satisfies Config
+}
