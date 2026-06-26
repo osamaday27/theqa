@@ -1,5 +1,7 @@
 {
   "name": "theqa",
+  "version": "1.0.0",
+  "description": "مركز ثقة لفحص السيارات - فحص شامل ودقيق قبل الشراء أو السفر",
   "type": "module",
   "private": true,
   "scripts": {
