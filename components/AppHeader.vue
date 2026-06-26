@@ -3,19 +3,26 @@
     <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- اللوجو -->
-        <div class="flex items-center gap-3 flex-shrink-0">
+        <!-- اللوجو المعدل بالكامل لعرض الصورة بشكل بارز ونظيف -->
+        <NuxtLink to="/" class="flex items-center gap-3 flex-shrink-0 group">
           <div class="relative">
-            <div class="w-12 h-12 bg-gradient-to-br from-primary-800 to-primary-600 rounded-2xl flex items-center justify-center shadow-lg shadow-primary-500/20">
-              <span class="text-2xl font-black text-theqa-gold">ث</span>
+            <!-- حاوية الصورة مباشرة بدون خلفيات ملونة أو حدود قديمة تضيق المساحة -->
+            <div class="w-20 h-17 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              <img 
+                src="/logo.png" 
+                alt="شعار منصة ثقة لفحص السيارات" 
+                class="w-full h-full object-contain"
+              />
             </div>
-            <span class="absolute -top-1 -right-1 w-5 h-5 bg-theqa-gold rounded-full flex items-center justify-center text-[10px] text-primary-900 font-black border-2 border-white shadow-md">✓</span>
+            <!-- علامة التوثيق الذكية متمحورة بشكل متناسق بجانب اللوجو البارز -->
+            <span class="absolute -top-0.5 -right-0.5 w-5 h-5 bg-theqa-gold rounded-full flex items-center justify-center text-[10px] text-primary-900 font-black border-2 border-white shadow-md">✓</span>
           </div>
+          <!-- النصوص المرافقة للشعار -->
           <div class="hidden sm:block">
-            <span class="text-2xl font-black text-primary-900 leading-none">ثقة</span>
-            <span class="block text-[10px] text-theqa-gold font-bold tracking-wider">فحص احترافي</span>
+            <span class="text-2xl font-black text-primary-900 leading-none block">ثقة</span>
+            <span class="block text-[10px] text-theqa-gold font-bold tracking-wider mt-1">فحص احترافي للسيارات</span>
           </div>
-        </div>
+        </NuxtLink>
 
         <!-- الروابط - ديسكتوب -->
         <ul class="hidden lg:flex items-center gap-1">
@@ -31,10 +38,10 @@
           </li>
         </ul>
 
-        <!-- أزرار اليمين -->
+        <!-- أزرار التحكم الجانبية -->
         <div class="flex items-center gap-3">
           <a 
-            href="https://wa.me/201090718857?text=أهلاً%20بكم%20في%20ثقة%20لحص%20السيارات" 
+            href="https://wa.meً%20بكم%20في%20ثقة%20لحص%20السيارات" 
             target="_blank"
             class="hidden sm:flex items-center gap-2 bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white px-4 py-2 rounded-full text-sm font-bold transition-all duration-300"
           >
@@ -49,7 +56,7 @@
             to="/contact" 
             class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-theqa-gold to-yellow-500 text-primary-900 px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-theqa-gold/25 hover:shadow-theqa-gold/40 hover:scale-105 transition-all duration-300"
           >
-            <span>أطلب الأن</span>
+            <span>أطلب الآن</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
@@ -91,12 +98,12 @@
               class="block text-center bg-gradient-to-r from-theqa-gold to-yellow-500 text-primary-900 px-6 py-3 rounded-xl font-bold transition-all duration-300"
               @click="isOpen = false"
             >
-              أطلب الأن
+              أطلب الآن
             </NuxtLink>
           </li>
           <li>
             <a 
-              href="https://wa.me/201090718857?text=أهلاً%20بكم%20في%20ثقة%20لحص%20السيارات" 
+              href="https://wa.meً%20بكم%20في%20ثقة%20لحص%20السيارات" 
               target="_blank"
               class="flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] px-6 py-3 rounded-xl font-bold transition-all duration-300"
               @click="isOpen = false"
