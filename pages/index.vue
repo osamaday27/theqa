@@ -229,7 +229,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M20.5 8.5V16L12 20.5" />
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-3">خدمة مخدوم</h3>
+              <h3 class="text-2xl font-bold text-white mb-3">خدمة الفحص المتنقل</h3>
               <p class="text-primary-200/80 leading-relaxed mb-4">
                 فحص شامل للسيارة خارج مدينتك مع تسهيل نقل الملكية والتأمين
                 والشحن.

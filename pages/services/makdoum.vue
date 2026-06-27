@@ -24,10 +24,10 @@
           <span class="text-white/80 text-sm font-medium">خدماتنا</span>
         </div>
         <h1 class="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 tracking-tight">
-          خدمة <span class="text-theqa-gold">مخدوم</span>
+          خدمة <span class="text-theqa-gold">الفحص المتنقل</span>
         </h1>
         <p class="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-          خدمة متكاملة لفحص السيارة خارج مدينتك مع تسهيل إجراءات النقل والملكية
+           نغطي الرياض بالكامل مع تسهيل إجراءات النقل 
         </p>
       </div>
     </section>
@@ -120,7 +120,7 @@
         <div class="text-center mb-14">
           <span class="inline-flex items-center gap-2 text-theqa-gold font-bold text-sm tracking-wider bg-theqa-gold/10 border border-theqa-gold/20 px-5 py-2.5 rounded-full mb-4">
             <span class="w-1.5 h-1.5 bg-theqa-gold rounded-full animate-pulse"></span>
-            باقات خدمة مخدوم
+            باقات خدمة الفحص المتنقل
           </span>
           <h2 class="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">
             اختر <span class="text-theqa-gold">الباقة</span> المناسبة لك
@@ -151,9 +151,9 @@ const steps = [
 
 const features = [
   'فحص شامل خارج مدينتك',
-  'تسهيل نقل الملكية',
-  'ترتيب التأمين والشحن',
-  'تقرير فيديو مفصل'
+  'نغطي الرياض بالكامل',
+  'يوجد خدمة فحص السيارة في المزادات',
+  'تقرير مفصل'
 ]
 
 /* ============================================ */
@@ -202,7 +202,7 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: 'كبار العملاء',
-    price: 2450,
+    price: 2400,
     items: [
       { label: 'المحرك وناقل الحركة', included: true },
       { label: 'الدفرنس والكمبيوتر', included: true },

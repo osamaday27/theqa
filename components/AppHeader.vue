@@ -114,7 +114,7 @@
                   </div>
                 </NuxtLink>
 
-                <!-- خدمة مخدوم -->
+                <!-- خدمة الفحص المتنقل -->
                 <NuxtLink 
                   to="/services/makdoum"
                   class="flex items-center gap-4 px-5 py-3 hover:bg-primary-50 transition-all duration-200 group"
@@ -126,7 +126,7 @@
                     </svg>
                   </span>
                   <div>
-                    <p class="font-bold text-primary-800 text-sm group-hover:text-theqa-gold transition-colors">خدمة مخدوم</p>
+                    <p class="font-bold text-primary-800 text-sm group-hover:text-theqa-gold transition-colors">خدمة الفحص المتنقل</p>
                     <p class="text-gray-400 text-xs">فحص خارج المدن مع نقل الملكية</p>
                   </div>
                 </NuxtLink>
@@ -320,7 +320,7 @@
                 <svg class="w-4 h-4 text-theqa-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9-4 9 4M3 7l9 4 9-4M3 7v10l9 4 9-4V7"/>
                 </svg>
-                خدمة مخدوم
+                خدمة الفحص المتنقل
               </NuxtLink>
               <NuxtLink 
                 to="/services/traveler" 
@@ -398,7 +398,7 @@ const searchData = [
   },
   { 
     id: 2, 
-    title: 'خدمة مخدوم', 
+    title: 'خدمة الفحص المتنقل', 
     description: 'فحص خارج المدن', 
     icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9-4 9 4M3 7l9 4 9-4M3 7v10l9 4 9-4V7"/></svg>`, 
     path: '/services/makdoum' 

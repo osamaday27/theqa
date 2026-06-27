@@ -130,7 +130,7 @@
             <li>
               <a href="/services/makdoum" class="flex items-center gap-2 hover:text-theqa-gold transition-colors group">
                 <span class="w-1 h-1 bg-theqa-gold/30 rounded-full group-hover:bg-theqa-gold transition-colors"></span>
-                خدمة مخدوم
+                خدمة الفحص المتنقل
               </a>
             </li>
             <li>

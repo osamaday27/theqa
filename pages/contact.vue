@@ -124,7 +124,7 @@
                       >
                         <option value="">اختر الخدمة</option>
                         <option value="فحص ما قبل الشراء">فحص ما قبل الشراء</option>
-                        <option value="خدمة مخدوم">خدمة مخدوم</option>
+                        <option value="خدمة الفحص المتنقل">خدمة الفحص المتنقل</option>
                         <option value="فحص المسافر">فحص المسافر</option>
                         <option value="أخرى">خدمة أخرى</option>
                       </select>
