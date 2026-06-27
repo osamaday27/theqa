@@ -70,7 +70,7 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     minify: true,
-    preset: 'node-server'
+    preset: ''
   },
 
   // ===== RUNTIME CONFIG =====
