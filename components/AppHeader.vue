@@ -154,7 +154,7 @@
 
                 <!-- عرض جميع الخدمات -->
                 <NuxtLink 
-                  to="#services"
+                  to="/"
                   class="flex items-center justify-center gap-2 mx-4 py-2.5 bg-gradient-to-r from-theqa-gold to-yellow-500 text-primary-900 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-theqa-gold/20"
                   @click="closeDropdown"
                 >
