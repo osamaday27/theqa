@@ -92,11 +92,16 @@
           </div>
           <!-- صورة جانبية متحركة - فحص سيارة في مركز صيانة -->
           <div class="hidden lg:block relative animate-float-slow">
-            <div class="relative">
-              <div class="absolute -inset-4 bg-theqa-gold/20 rounded-3xl blur-2xl"></div>
-              <img src="https://images.unsplash.com/photo-1702146713858-8e7d1cc29fe8?w=600&q=80&auto=format&fit=crop"
-                alt="فحص سيارة"
-                class="relative rounded-3xl shadow-2xl border border-white/10 w-full h-[500px] object-cover" />
+  <div class="relative">
+    <!-- هالة الإضاءة الخلفية للسيارة -->
+    <div class="absolute -inset-4 bg-theqa-gold/20 rounded-3xl blur-2xl"></div>
+    
+    <!-- تم تصحيح المسار بحذف كلمة public والبدء بالسلاش مباشرة -->
+    <img 
+      src="/1.jpg"
+      alt="فحص سيارة"
+      class="relative rounded-3xl shadow-2xl border border-white/10 w-full h-[500px] object-cover" 
+    />
               <div
                 class="absolute -bottom-6 -right-6 bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/20">
                 <div class="flex items-center gap-3">
@@ -650,30 +655,31 @@ const whyUs = [
   },
 ];
 
-// بيانات آراء العملاء
+// بيانات آراء العملاء بالشخصيات والعبارات المصرية
 const testimonials = [
   {
-    name: "عبدالله الراجحي",
+    name: "عبد الله الشافعي",
     avatar: "ع",
-    role: "عميل مميز",
+    role: "عميل متميز",
     comment:
-      "فحص روعه ماشاء الله ويطلع لك كل كبيره وصغيره وكنت ابي اشتري موتر وطلع كل العيوب الي فيها والله صرفها عني واحب اشكر ابو خالد المدير",
+      "ما شاء الله فحص على الفرازة وجاب من الآخر! كشف على كل كبيرة وصغيرة في العربية لدرجة إنه طلع عيوب وصدمات صاحبها نفسه ماكنش يعرفها. وفر عليا فلوس كتير كنت هرميها في الأرض، بجد شكراً جزيلاً يا باشمهندس تامر على الأمانة دي.",
   },
   {
-    name: "محمد السالم",
+    name: "محمد مصطفى",
     avatar: "م",
-    role: "عميل مميز",
+    role: "عميل متميز",
     comment:
-      "خدمة ممتازة وفريق محترف، التقرير كان مفصل جداً وساعدني في اتخاذ القرار الصحيح",
+      "خدمة ممتازة وفريق عمل محترف وعلى أعلى مستوى. التقرير الفني اللي استلمته كان مفصل جداً وموضح بالصور والفيديو لكل جزء في الموتور والعفشة، وده ساعدني أخد القرار الصح وأنا مطمن ومن غير أي تردد.",
   },
   {
-    name: "فهد العتيبي",
-    avatar: "ف",
-    role: "عميل مميز",
+    name: "كريم المنشاوي",
+    avatar: "ك",
+    role: "عميل متميز",
     comment:
-      "أفضل مركز فحص سيارات في الرياض، أنصح به بشدة لكل من يريد شراء سيارة مستعملة",
+      "أفضل مركز فحص سيارات في القاهرة بلا منازع. دقة وأمانة وسرعة في التعامل، والمهندسين هناك فاهمين شغلهم بجد وبيشرحوا كل تفصيلة للمشتري. أنصح أي حد عاوز يشتري عربية مستعملة يروح ليهم وهو متطمن.",
   },
 ];
+
 </script>
 
 <style scoped>
