@@ -131,8 +131,7 @@
                       <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </div>
                   </div>
-
-                 <!-- ===== الرسالة (خلفية داكنة) ===== -->
+<!-- ===== الرسالة ===== -->
 <div class="relative">
   <label class="block text-white/80 font-bold mb-2 text-sm">
     الرسالة
@@ -140,8 +139,10 @@
   </label>
   <div class="relative">
     <span class="absolute right-4 top-4 text-white/30 pointer-events-none">
+      <!-- SVG الصحيح -->
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" 
+              d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/>
       </svg>
     </span>
     <textarea
@@ -154,15 +155,17 @@
   </div>
 </div>
 
-<!-- ===== تعليق (خلفية داكنة) ===== -->
+<!-- ===== تعليق (اختياري) ===== -->
 <div class="relative">
   <label class="block text-white/80 font-bold mb-2 text-sm">
     تعليق <span class="text-white/30 text-xs font-normal">(اختياري)</span>
   </label>
   <div class="relative">
     <span class="absolute right-4 top-4 text-white/30 pointer-events-none">
+      <!-- SVG الصحيح -->
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" 
+              d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/>
       </svg>
     </span>
     <textarea
