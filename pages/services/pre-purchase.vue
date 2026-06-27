@@ -121,10 +121,43 @@
         </div>
       </div>
     </section>
+
+    <!-- ============================================ -->
+    <!-- ===== PRICING SECTION — DARK PREMIUM ===== -->
+    <!-- ============================================ -->
+    <section class="relative py-20 md:py-28 bg-gradient-to-br from-[#0B1220] via-[#101a30] to-[#1a2540] overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06]" style="background-image: linear-gradient(rgba(212,175,55,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,.6) 1px, transparent 1px); background-size: 44px 44px;"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-theqa-gold/10 rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow pointer-events-none" style="animation-delay: 2s"></div>
+      <div class="absolute top-1/4 left-1/3 w-2 h-2 bg-theqa-gold/40 rounded-full animate-float-slow pointer-events-none"></div>
+      <div class="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-white/30 rounded-full animate-float-slow pointer-events-none" style="animation-delay: 1.2s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] border border-white/5 rounded-full animate-spin-slow pointer-events-none"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-14">
+          <span class="inline-flex items-center gap-2 text-theqa-gold font-bold text-sm tracking-wider bg-theqa-gold/10 border border-theqa-gold/20 px-5 py-2.5 rounded-full mb-4">
+            <span class="w-1.5 h-1.5 bg-theqa-gold rounded-full animate-pulse"></span>
+            باقات فحص ما قبل الشراء
+          </span>
+          <h2 class="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">
+            اختر <span class="text-theqa-gold">الباقة</span> المناسبة لك
+          </h2>
+          <p class="text-slate-400 max-w-2xl mx-auto text-lg">باقات فحص دقيقة تناسب نوع السيارة وحجم الفحص المطلوب قبل الشراء</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-start max-w-6xl mx-auto">
+          <PricingCard v-for="(plan, i) in pricingPlans" :key="i" :plan="plan" />
+        </div>
+
+        <p class="text-center text-slate-500 text-sm mt-10">جميع الأسعار شاملة ضريبة القيمة المضافة. الأسعار قابلة للتغيير دون إشعار مسبق.</p>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
+import { h } from 'vue'
+
 const inspectionItems = [
   'فحص المحرك والقير',
   'فحص الهيكل والسمكرة',
@@ -152,6 +185,207 @@ const tips = [
   'استفسر عن تاريخ الصيانة',
   'قم بتجربة القيادة'
 ]
+
+/* ============================================ */
+/* ============ PRICING PLANS DATA ============= */
+/* ============================================ */
+interface PricingPlan {
+  name: string
+  price: number
+  oldPrice?: number
+  discountLabel?: string
+  highlighted?: boolean
+  items: { label: string; included: boolean }[]
+}
+
+const pricingPlans: PricingPlan[] = [
+  {
+    name: 'الأساسي',
+    price: 1000,
+    items: [
+      { label: 'المحرك', included: true },
+      { label: 'ناقل الحركة', included: true },
+      { label: 'الدفرنس', included: true },
+      { label: 'ميكانيكا أسفل السيارة', included: true },
+      { label: 'الكمبيوتر والحساسات', included: true },
+      { label: 'الهيكل الداخلي وتجربة السيارة', included: true },
+      { label: 'الهيكل الخارجي والوسائد الهوائية', included: false },
+      { label: 'الديكورات والملحقات الخارجية', included: false },
+    ]
+  },
+  {
+    name: 'الشامل',
+    price: 1260,
+    oldPrice: 1400,
+    discountLabel: 'خصم 10%',
+    highlighted: true,
+    items: [
+      { label: 'المحرك', included: true },
+      { label: 'ناقل الحركة', included: true },
+      { label: 'الدفرنس', included: true },
+      { label: 'ميكانيكا أسفل السيارة', included: true },
+      { label: 'الكمبيوتر والحساسات', included: true },
+      { label: 'الهيكل الداخلي وتجربة السيارة', included: true },
+      { label: 'الهيكل الخارجي والوسائد الهوائية', included: true },
+      { label: 'الديكورات والملحقات الخارجية', included: true },
+    ]
+  },
+  {
+    name: 'المحركات',
+    price: 650,
+    items: [
+      { label: 'المحرك', included: true },
+      { label: 'ناقل الحركة', included: true },
+      { label: 'الدفرنس', included: true },
+      { label: 'ميكانيكا أسفل السيارة', included: true },
+      { label: 'الكمبيوتر والحساسات', included: true },
+      { label: 'الهيكل الداخلي وتجربة السيارة', included: false },
+      { label: 'الهيكل الخارجي والوسائد الهوائية', included: false },
+      { label: 'الديكورات والملحقات الخارجية', included: false },
+    ]
+  }
+]
+
+/* ============================================ */
+/* ============ PRICING CARD COMPONENT ========= */
+/* ============================================ */
+const PricingCard = (props: { plan: PricingPlan }) => {
+  const { plan } = props
+  return h(
+    'div',
+    {
+      class: `group relative rounded-[1.75rem] overflow-hidden transition-all duration-500 hover:-translate-y-2 ${
+        plan.highlighted
+          ? 'md:-mt-4 md:mb-4 ring-1 ring-theqa-gold/40 shadow-2xl shadow-theqa-gold/20'
+          : 'shadow-xl shadow-black/20'
+      }`,
+    },
+    [
+      plan.discountLabel
+        ? h(
+            'div',
+            { class: 'absolute top-0 left-0 z-20 w-28 h-28 overflow-hidden pointer-events-none' },
+            [
+              h(
+                'span',
+                {
+                  class:
+                    'absolute -left-10 top-5 w-40 text-center rotate-[-45deg] bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-bold py-1 shadow-md',
+                },
+                plan.discountLabel
+              ),
+            ]
+          )
+        : null,
+
+      plan.highlighted
+        ? h('div', {
+            class:
+              'absolute -inset-[1.5px] bg-gradient-to-br from-theqa-gold via-yellow-400 to-theqa-gold rounded-[1.85rem] opacity-80 -z-10',
+          })
+        : null,
+
+      h(
+        'div',
+        {
+          class: `relative h-full flex flex-col bg-gradient-to-br ${
+            plan.highlighted
+              ? 'from-[#0d1a30] to-[#15233f]'
+              : 'from-white/[0.04] to-white/[0.02]'
+          } backdrop-blur-xl border ${
+            plan.highlighted ? 'border-theqa-gold/30' : 'border-white/10'
+          } rounded-[1.75rem]`,
+        },
+        [
+          h(
+            'div',
+            {
+              class: `relative text-center py-6 px-6 ${
+                plan.highlighted
+                  ? 'bg-gradient-to-r from-theqa-gold to-yellow-500'
+                  : 'bg-white/[0.03] border-b border-white/10'
+              }`,
+            },
+            [
+              h(
+                'h3',
+                {
+                  class: `text-xl font-black ${plan.highlighted ? 'text-primary-900' : 'text-white'}`,
+                },
+                plan.name
+              ),
+            ]
+          ),
+
+          h('div', { class: 'text-center pt-8 pb-6 px-6' }, [
+            h('div', { class: 'flex items-center justify-center gap-2' }, [
+              h(
+                'span',
+                { class: `text-4xl md:text-5xl font-black ${plan.highlighted ? 'text-theqa-gold' : 'text-white'}` },
+                String(plan.price)
+              ),
+              h('span', { class: 'text-sm text-slate-400 font-bold' }, 'ريال'),
+            ]),
+            plan.oldPrice
+              ? h('div', { class: 'flex items-center justify-center gap-2 mt-2' }, [
+                  h(
+                    'span',
+                    { class: 'text-xs bg-theqa-mint/15 text-theqa-mint px-2.5 py-1 rounded-full font-bold' },
+                    `وفّر ${plan.oldPrice - plan.price} ريال`
+                  ),
+                  h('span', { class: 'text-sm text-slate-500 line-through' }, String(plan.oldPrice)),
+                ])
+              : null,
+          ]),
+
+          h(
+            'ul',
+            { class: 'flex-1 px-6 pb-6 space-y-3' },
+            plan.items.map((item) =>
+              h('li', { class: 'flex items-center justify-between gap-3 text-sm border-b border-white/5 pb-3' }, [
+                h('span', { class: item.included ? 'text-slate-200' : 'text-slate-500' }, item.label),
+                item.included
+                  ? h(
+                      'svg',
+                      { class: 'w-5 h-5 text-theqa-mint flex-shrink-0', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' },
+                      [h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2.5', d: 'M5 13l4 4L19 7' })]
+                    )
+                  : h(
+                      'svg',
+                      { class: 'w-5 h-5 text-red-400/70 flex-shrink-0', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' },
+                      [h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2.5', d: 'M6 18L18 6M6 6l12 12' })]
+                    ),
+              ])
+            )
+          ),
+
+          h('div', { class: 'p-6 pt-0' }, [
+            h(
+              'a',
+              {
+                href: '/contact',
+                class: `group relative block text-center py-3.5 rounded-xl font-bold transition-all duration-300 overflow-hidden ${
+                  plan.highlighted
+                    ? 'bg-gradient-to-r from-theqa-gold to-yellow-500 text-primary-900 shadow-lg shadow-theqa-gold/30 hover:shadow-theqa-gold/50 hover:scale-[1.02]'
+                    : 'bg-white/10 text-white hover:bg-white/20 border border-white/10'
+                }`,
+              },
+              [
+                plan.highlighted
+                  ? h('span', {
+                      class:
+                        'absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12',
+                    })
+                  : null,
+                h('span', { class: 'relative z-10' }, 'أطلب الآن'),
+              ]
+            ),
+          ]),
+        ]
+      ),
+    ]
+  )
+}
 </script>
 
 <style scoped>

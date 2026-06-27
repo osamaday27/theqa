@@ -34,97 +34,165 @@
       <div class="container mx-auto px-4 relative">
         <div class="grid lg:grid-cols-2 gap-10 lg:gap-12">
 
-          <!-- ===== CONTACT FORM ===== -->
-          <div class="bg-white rounded-[1.75rem] shadow-xl shadow-primary-900/5 p-6 md:p-10 border border-gray-100">
-            <h2 class="text-2xl md:text-3xl font-bold text-primary-900 mb-2">
-              أرسل <span class="text-theqa-gold">رسالتك</span>
-            </h2>
-            <p class="text-gray-500 mb-8">سنقوم بالرد عليك في أقرب وقت ممكن</p>
+          <!-- ===== CONTACT FORM — DARK GLASS PREMIUM ===== -->
+          <div class="relative group">
+            <!-- حدود متدرجة متوهجة حول الكارد -->
+            <div class="absolute -inset-[1.5px] bg-gradient-to-br from-theqa-gold/60 via-slate-600/30 to-theqa-gold/40 rounded-[1.85rem] opacity-70 group-hover:opacity-100 blur-[2px] transition-opacity duration-700"></div>
 
-            <form @submit.prevent="handleSubmit" class="space-y-5">
-              <div>
-                <label class="block text-primary-700 font-bold mb-2 text-sm">الاسم</label>
-                <input
-                  type="text"
-                  v-model="form.name"
-                  placeholder="ادخل اسمك"
-                  class="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-theqa-gold focus:border-transparent outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
-                  required
-                />
+            <div class="relative bg-gradient-to-br from-[#0B1220]/95 via-[#101a30]/95 to-[#1a2540]/95 backdrop-blur-2xl rounded-[1.75rem] shadow-2xl shadow-black/40 p-6 md:p-10 overflow-hidden">
+              <!-- زخارف داخلية -->
+              <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(rgba(212,175,55,.8) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,.8) 1px, transparent 1px); background-size: 36px 36px;"></div>
+              <div class="absolute -top-24 -right-24 w-72 h-72 bg-theqa-gold/10 rounded-full blur-3xl"></div>
+              <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+              <!-- خط ضوئي علوي متحرك -->
+              <div class="absolute top-0 left-0 right-0 h-[2px] overflow-hidden">
+                <div class="h-full w-1/3 bg-gradient-to-r from-transparent via-theqa-gold to-transparent animate-shimmer-line"></div>
               </div>
 
-              <div>
-                <label class="block text-primary-700 font-bold mb-2 text-sm">البريد الإلكتروني</label>
-                <input
-                  type="email"
-                  v-model="form.email"
-                  placeholder="ادخل بريدك الإلكتروني"
-                  class="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-theqa-gold focus:border-transparent outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
-                  required
-                />
-              </div>
+              <div class="relative z-10">
+                <div class="inline-flex items-center gap-2 bg-theqa-gold/10 border border-theqa-gold/25 px-4 py-1.5 rounded-full mb-5">
+                  <span class="w-1.5 h-1.5 bg-theqa-gold rounded-full animate-pulse"></span>
+                  <span class="text-theqa-gold text-xs font-bold tracking-wide">نموذج التواصل</span>
+                </div>
 
-              <div>
-                <label class="block text-primary-700 font-bold mb-2 text-sm">رقم الجوال</label>
-                <input
-                  type="tel"
-                  v-model="form.phone"
-                  placeholder="ادخل رقم جوالك"
-                  class="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-theqa-gold focus:border-transparent outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
-                />
-              </div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                  أرسل <span class="text-theqa-gold">رسالتك</span>
+                </h2>
+                <p class="text-slate-400 mb-8">سنقوم بالرد عليك في أقرب وقت ممكن</p>
 
-              <div>
-                <label class="block text-primary-700 font-bold mb-2 text-sm">نوع الخدمة</label>
-                <select
-                  v-model="form.service"
-                  class="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-theqa-gold focus:border-transparent outline-none transition-all duration-300 bg-gray-50 focus:bg-white"
-                >
-                  <option value="">اختر الخدمة</option>
-                  <option value="فحص ما قبل الشراء">فحص ما قبل الشراء</option>
-                  <option value="خدمة مخدوم">خدمة مخدوم</option>
-                  <option value="فحص المسافر">فحص المسافر</option>
-                  <option value="أخرى">خدمة أخرى</option>
-                </select>
-              </div>
+                <form @submit.prevent="handleSubmit" class="space-y-5">
+                  <!-- الاسم -->
+                  <div class="relative">
+                    <label class="block text-slate-300 font-bold mb-2 text-sm">الاسم</label>
+                    <div class="relative">
+                      <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 peer-focus:text-theqa-gold transition-colors pointer-events-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z"/></svg>
+                      </span>
+                      <input
+                        type="text"
+                        v-model="form.name"
+                        placeholder="ادخل اسمك"
+                        class="peer w-full p-4 pr-12 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:ring-2 focus:ring-theqa-gold/60 focus:border-theqa-gold/50 focus:bg-white/[0.07] outline-none transition-all duration-300 hover:border-white/20"
+                        required
+                      />
+                    </div>
+                  </div>
 
-              <div>
-                <label class="block text-primary-700 font-bold mb-2 text-sm">الرسالة</label>
-                <textarea
-                  v-model="form.message"
-                  rows="5"
-                  placeholder="اكتب رسالتك هنا..."
-                  class="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-theqa-gold focus:border-transparent outline-none transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
-                  required
-                ></textarea>
-              </div>
+                  <!-- البريد الإلكتروني -->
+                  <div class="relative">
+                    <label class="block text-slate-300 font-bold mb-2 text-sm">البريد الإلكتروني</label>
+                    <div class="relative">
+                      <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                      </span>
+                      <input
+                        type="email"
+                        v-model="form.email"
+                        placeholder="ادخل بريدك الإلكتروني"
+                        class="peer w-full p-4 pr-12 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:ring-2 focus:ring-theqa-gold/60 focus:border-theqa-gold/50 focus:bg-white/[0.07] outline-none transition-all duration-300 hover:border-white/20"
+                        required
+                      />
+                    </div>
+                  </div>
 
-              <button
-                type="submit"
-                :disabled="isSubmitting"
-                class="group w-full bg-gradient-to-r from-theqa-gold to-yellow-500 text-primary-900 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-theqa-gold/30 hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-              >
-                <span v-if="!isSubmitting">إرسال</span>
-                <span v-else class="flex items-center gap-2">
-                  <svg class="animate-spin w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  جاري الإرسال...
-                </span>
-                <svg v-if="!isSubmitting" class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8l-4 4m0 0l4 4m-4-4h18"/>
-                </svg>
-              </button>
+                  <!-- رقم الجوال -->
+                  <div class="relative">
+                    <label class="block text-slate-300 font-bold mb-2 text-sm">رقم الجوال</label>
+                    <div class="relative">
+                      <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.04 11.04 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                      </span>
+                      <input
+                        type="tel"
+                        v-model="form.phone"
+                        placeholder="ادخل رقم جوالك"
+                        class="peer w-full p-4 pr-12 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:ring-2 focus:ring-theqa-gold/60 focus:border-theqa-gold/50 focus:bg-white/[0.07] outline-none transition-all duration-300 hover:border-white/20"
+                      />
+                    </div>
+                  </div>
 
-              <!-- ===== رسائل الحالة ===== -->
-              <div v-if="successMessage" class="p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-center font-medium">
-                ✅ {{ successMessage }}
+                  <!-- نوع الخدمة -->
+                  <div class="relative">
+                    <label class="block text-slate-300 font-bold mb-2 text-sm">نوع الخدمة</label>
+                    <div class="relative">
+                      <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none z-10">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3.5 8.5L12 4l8.5 4.5L12 13z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3.5 8.5V16L12 20.5V13"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M20.5 8.5V16L12 20.5"/></svg>
+                      </span>
+                      <select
+                        v-model="form.service"
+                        class="w-full p-4 pr-12 bg-white/[0.04] border border-white/10 rounded-xl text-white focus:ring-2 focus:ring-theqa-gold/60 focus:border-theqa-gold/50 focus:bg-white/[0.07] outline-none transition-all duration-300 hover:border-white/20 appearance-none [&>option]:bg-[#101a30] [&>option]:text-white"
+                      >
+                        <option value="">اختر الخدمة</option>
+                        <option value="فحص ما قبل الشراء">فحص ما قبل الشراء</option>
+                        <option value="خدمة مخدوم">خدمة مخدوم</option>
+                        <option value="فحص المسافر">فحص المسافر</option>
+                        <option value="أخرى">خدمة أخرى</option>
+                      </select>
+                      <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </div>
+                  </div>
+
+                  <!-- الرسالة -->
+                  <div class="relative">
+                    <label class="block text-slate-300 font-bold mb-2 text-sm">الرسالة</label>
+                    <div class="relative">
+                      <span class="absolute right-4 top-4 text-slate-500 pointer-events-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/></svg>
+                      </span>
+                      <textarea
+                        v-model="form.message"
+                        rows="5"
+                        placeholder="اكتب رسالتك هنا..."
+                        class="w-full p-4 pr-12 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:ring-2 focus:ring-theqa-gold/60 focus:border-theqa-gold/50 focus:bg-white/[0.07] outline-none transition-all duration-300 hover:border-white/20 resize-none"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <!-- زر الإرسال بتأثير لمعان -->
+                  <button
+                    type="submit"
+                    :disabled="isSubmitting"
+                    class="group relative w-full bg-gradient-to-r from-theqa-gold to-yellow-500 text-primary-900 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-theqa-gold/40 hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
+                  >
+                    <span class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"></span>
+                    <span v-if="!isSubmitting" class="relative z-10">إرسال</span>
+                    <span v-else class="relative z-10 flex items-center gap-2">
+                      <svg class="animate-spin w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      جاري الإرسال...
+                    </span>
+                    <svg v-if="!isSubmitting" class="relative z-10 w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8l-4 4m0 0l4 4m-4-4h18"/>
+                    </svg>
+                  </button>
+
+                  <!-- ===== رسائل الحالة ===== -->
+                  <Transition
+                    enter-active-class="transition duration-300 ease-out"
+                    enter-from-class="opacity-0 -translate-y-1"
+                    enter-to-class="opacity-100 translate-y-0"
+                  >
+                    <div v-if="successMessage" class="flex items-center gap-2.5 p-4 bg-theqa-mint/10 border border-theqa-mint/30 rounded-xl text-theqa-mint font-medium">
+                      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75l1.5 1.5L15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      {{ successMessage }}
+                    </div>
+                  </Transition>
+                  <Transition
+                    enter-active-class="transition duration-300 ease-out"
+                    enter-from-class="opacity-0 -translate-y-1"
+                    enter-to-class="opacity-100 translate-y-0"
+                  >
+                    <div v-if="errorMessage" class="flex items-center gap-2.5 p-4 bg-red-500/10 border border-red-500/30 rounded-xl text-red-400 font-medium">
+                      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3.75m0 3.75h.008M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      {{ errorMessage }}
+                    </div>
+                  </Transition>
+                </form>
               </div>
-              <div v-if="errorMessage" class="p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-center font-medium">
-                ❌ {{ errorMessage }}
-              </div>
-            </form>
+            </div>
           </div>
 
           <!-- ===== CONTACT INFO ===== -->
@@ -218,7 +286,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue' 
+import { ref } from 'vue'
 // ===== تعريف الواجهات =====
 interface ContactForm {
   name: string
@@ -260,7 +328,7 @@ const handleSubmit = async (): Promise<void> => {
     })
 
     if (response.success) {
-      successMessage.value = '✅ تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.'
+      successMessage.value = 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.'
       // إعادة تعيين النموذج
       form.value = {
         name: '',
@@ -270,10 +338,10 @@ const handleSubmit = async (): Promise<void> => {
         message: ''
       }
     } else {
-      errorMessage.value = '❌ ' + (response.message || 'حدث خطأ أثناء الإرسال')
+      errorMessage.value = response.message || 'حدث خطأ أثناء الإرسال'
     }
   } catch (error: any) {
-    errorMessage.value = '❌ ' + (error.message || 'حدث خطأ في الاتصال بالخادم')
+    errorMessage.value = error.message || 'حدث خطأ في الاتصال بالخادم'
     console.error('Error submitting form:', error)
   } finally {
     isSubmitting.value = false
@@ -290,10 +358,29 @@ const handleSubmit = async (): Promise<void> => {
   0%, 100% { opacity: 0.3; transform: scale(1); }
   50% { opacity: 0.55; transform: scale(1.08); }
 }
+@keyframes shimmer-line {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
 .animate-spin-slow {
   animation: spin-slow 30s linear infinite;
 }
 .animate-pulse-slow {
   animation: pulse-slow 8s ease-in-out infinite;
+}
+.animate-shimmer-line {
+  animation: shimmer-line 3s ease-in-out infinite;
+}
+
+/* تحسين مظهر السهم الافتراضي لعنصر select على متصفحات مختلفة */
+select {
+  background-image: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow, .animate-pulse-slow, .animate-shimmer-line {
+    animation: none !important;
+  }
 }
 </style>
