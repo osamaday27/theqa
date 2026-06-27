@@ -132,23 +132,47 @@
                     </div>
                   </div>
 
-                  <!-- الرسالة -->
-                  <div class="relative">
-                    <label class="block text-slate-300 font-bold mb-2 text-sm">الرسالة</label>
-                    <div class="relative">
-                      <span class="absolute right-4 top-4 text-slate-500 pointer-events-none">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/></svg>
-                      </span>
-                      <textarea
-                        v-model="form.message"
-                        rows="5"
-                        placeholder="اكتب رسالتك هنا..."
-                        class="w-full p-4 pr-12 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:ring-2 focus:ring-theqa-gold/60 focus:border-theqa-gold/50 focus:bg-white/[0.07] outline-none transition-all duration-300 hover:border-white/20 resize-none"
-                        required
-                      ></textarea>
-                    </div>
-                  </div>
+                 <!-- ===== الرسالة (خلفية داكنة) ===== -->
+<div class="relative">
+  <label class="block text-white/80 font-bold mb-2 text-sm">
+    الرسالة
+    <span class="text-theqa-gold mr-1">*</span>
+  </label>
+  <div class="relative">
+    <span class="absolute right-4 top-4 text-white/30 pointer-events-none">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/>
+      </svg>
+    </span>
+    <textarea
+      v-model="form.message"
+      rows="4"
+      placeholder="اكتب رسالتك هنا..."
+      class="w-full p-4 pr-12 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-white/30 focus:ring-2 focus:ring-theqa-gold focus:border-theqa-gold/50 focus:bg-white/10 outline-none transition-all duration-300 hover:border-white/20 resize-none"
+      required
+    ></textarea>
+  </div>
+</div>
 
+<!-- ===== تعليق (خلفية داكنة) ===== -->
+<div class="relative">
+  <label class="block text-white/80 font-bold mb-2 text-sm">
+    تعليق <span class="text-white/30 text-xs font-normal">(اختياري)</span>
+  </label>
+  <div class="relative">
+    <span class="absolute right-4 top-4 text-white/30 pointer-events-none">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/>
+      </svg>
+    </span>
+    <textarea
+      v-model="form.comment"
+      rows="3"
+      placeholder="اكتب تعليقك هنا (اختياري)..."
+      class="w-full p-4 pr-12 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-white/30 focus:ring-2 focus:ring-theqa-gold focus:border-theqa-gold/50 focus:bg-white/10 outline-none transition-all duration-300 hover:border-white/20 resize-none"
+    ></textarea>
+  </div>
+</div>
                   <!-- زر الإرسال بتأثير لمعان -->
                   <button
                     type="submit"

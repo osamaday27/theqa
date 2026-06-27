@@ -35,6 +35,7 @@ export default defineEventHandler(async (event) => {
 📱 رقم الجوال: ${body.phone || 'غير مدخل'}
 🛠️ نوع الخدمة: ${body.service || 'غير محدد'}
 💬 الرسالة: ${body.message}
+💬 التعليق: ${body.comment}
 ----------------------------------------
 `
 
