@@ -124,12 +124,7 @@
                 فحص المسافر
               </a>
             </li>
-            <li>
-              <a href="/services/pre-purchase" class="flex items-center gap-2 hover:text-theqa-gold transition-colors group">
-                <span class="w-1 h-1 bg-theqa-gold/30 rounded-full group-hover:bg-theqa-gold transition-colors"></span>
-                تقرير مفصل بالفيديو
-              </a>
-            </li>
+           
           </ul>
         </div>
 
@@ -153,7 +148,7 @@
               </a>
             </li> -->
             <li>
-              <a href="#" class="flex items-center gap-2 hover:text-theqa-gold transition-colors group">
+              <a href="/contact" class="flex items-center gap-2 hover:text-theqa-gold transition-colors group">
                 <span class="w-1 h-1 bg-theqa-gold/30 rounded-full group-hover:bg-theqa-gold transition-colors"></span>
                 الاسترجاع والاستبدال
               </a>
