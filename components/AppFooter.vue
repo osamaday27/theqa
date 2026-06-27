@@ -200,7 +200,7 @@
               </svg>
               <div>
                 <p class="text-xs text-primary-500">العنوان</p>
-                <p class="font-bold hover:text-white transition-colors">القاهرة - مصر</p>
+                <p class="font-bold hover:text-white transition-colors">الرياض - معارض القادسية</p>
               </div>
             </li>
             <li class="flex items-start gap-3 group hover:text-white transition-colors">

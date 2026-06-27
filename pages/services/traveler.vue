@@ -165,7 +165,7 @@ interface PricingPlan {
 const pricingPlans: PricingPlan[] = [
   {
     name: 'فحص سريع',
-    price: 3500,
+    price: 350,
     items: [
       { label: 'فحص الزيوت والسوائل', included: true },
       { label: 'فحص الكفرات والفرامل', included: true },
@@ -178,8 +178,8 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: 'فحص الرحلة',
-    price: 5500,
-    oldPrice: 6500,
+    price: 550,
+    oldPrice: 650,
     discountLabel: 'خصم 15%',
     highlighted: true,
     items: [
@@ -194,7 +194,7 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: 'فحص شامل + طوارئ',
-    price: 75000,
+    price: 7500,
     items: [
       { label: 'فحص الزيوت والسوائل', included: true },
       { label: 'فحص الكفرات والفرامل', included: true },
@@ -285,14 +285,14 @@ const PricingCard = (props: { plan: PricingPlan }) => {
                 { class: `text-4xl md:text-5xl font-black ${plan.highlighted ? 'text-theqa-gold' : 'text-white'}` },
                 String(plan.price)
               ),
-              h('span', { class: 'text-sm text-slate-400 font-bold' }, 'مصري'),
+              h('span', { class: 'text-sm text-slate-400 font-bold' }, 'ريال'),
             ]),
             plan.oldPrice
               ? h('div', { class: 'flex items-center justify-center gap-2 mt-2' }, [
                   h(
                     'span',
                     { class: 'text-xs bg-theqa-mint/15 text-theqa-mint px-2.5 py-1 rounded-full font-bold' },
-                    `وفّر ${plan.oldPrice - plan.price} مصري`
+                    `وفّر ${plan.oldPrice - plan.price} ريال`
                   ),
                   h('span', { class: 'text-sm text-slate-500 line-through' }, String(plan.oldPrice)),
                 ])

@@ -262,7 +262,7 @@
                   </div>
                   <div class="pt-1">
                     <p class="text-xs text-gray-400">العنوان</p>
-                    <p class="font-bold text-primary-800">القاهرة - مصر</p>
+                    <p class="font-bold text-primary-800">الرياض - معارض القادسية</p>
                   </div>
                 </div>
 
