@@ -194,7 +194,7 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: 'فحص شامل + طوارئ',
-    price: 7500,
+    price: 750,
     items: [
       { label: 'فحص الزيوت والسوائل', included: true },
       { label: 'فحص الكفرات والفرامل', included: true },

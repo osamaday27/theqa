@@ -231,8 +231,7 @@
               </div>
               <h3 class="text-2xl font-bold text-white mb-3">خدمة الفحص المتنقل</h3>
               <p class="text-primary-200/80 leading-relaxed mb-4">
-                فحص شامل للسيارة خارج مدينتك مع تسهيل نقل الملكية والتأمين
-                والشحن.
+             فحص شامل للسيارة نغطى جميع أنحاء الرياض مع تسهيل إجراءات النقل
               </p>
               <ul class="space-y-2 mb-6">
                 <li
@@ -241,7 +240,7 @@
                     viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                   </svg>
-                  حضور المالك للفرع
+                  نغطي الرياض بالكامل 
                 </li>
                 <li
                   class="flex items-center gap-2 text-sm text-primary-200/80 group-hover:text-white transition-colors">
@@ -249,7 +248,7 @@
                     viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                   </svg>
-                  تقرير فيديو مسجل
+                 يوجد خدمة فحص السيارة في المزادات
                 </li>
                 <li
                   class="flex items-center gap-2 text-sm text-primary-200/80 group-hover:text-white transition-colors">
