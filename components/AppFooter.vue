@@ -181,7 +181,7 @@
               </svg>
               <div>
                 <p class="text-xs text-primary-500">الهاتف</p>
-                <a href="tel:+201090718857" class="font-bold hover:text-theqa-gold transition-colors" dir="ltr">+2 01090718857</a>
+                <a href="tel:+966533000983" class="font-bold hover:text-theqa-gold transition-colors" dir="ltr">+966 53 300 0983</a>
               </div>
             </li>
             <li class="flex items-start gap-3 group hover:text-white transition-colors">
