@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-primary-900 text-white relative overflow-hidden">
-    <!-- زخارف خلفية خفيفة لتطابق هوية باقي الصفحة -->
+    <!-- زخارف خلفية -->
     <div class="absolute top-0 right-0 w-72 h-72 bg-theqa-gold/5 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-0 left-0 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -12,12 +12,12 @@
             طرق الدفع الآمنة:
           </span>
 
-          <!-- tabby -->
+          <!-- Tabby -->
           <div class="flex items-center gap-2 bg-white px-3.5 md:px-4 py-2 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-black/10">
             <span class="text-[#1AAE9F] font-black text-sm md:text-base tracking-tight">tabby</span>
           </div>
 
-          <!-- تمارا (Tamara) -->
+          <!-- تمارا -->
           <div class="flex items-center gap-2 bg-white px-3.5 md:px-4 py-2 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-black/10">
             <span class="text-[#1A1A2E] font-black text-sm md:text-base tracking-tight">تمارا</span>
           </div>
@@ -44,7 +44,7 @@
             <span class="text-slate-900 font-semibold text-[11px] md:text-xs">Pay</span>
           </div>
 
-          <!-- مدى (mada) -->
+          <!-- مدى -->
           <div class="flex items-center gap-2 bg-white px-3.5 md:px-4 py-2 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-black/10">
             <span class="flex gap-0.5">
               <span class="w-1.5 h-4 md:h-4.5 bg-[#00A19A] rounded-sm"></span>
@@ -77,7 +77,6 @@
                 alt="ثقة - فحص السيارات"
                 class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
               />
-              <!-- علامة توثيق -->
               <span class="absolute -top-1 -right-1 w-6 h-6 md:w-7 md:h-7 bg-theqa-gold rounded-full flex items-center justify-center border-2 border-primary-900 shadow-lg shadow-theqa-gold/30">
                 <svg class="w-3.5 h-3.5 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
@@ -105,7 +104,7 @@
             <a href="#" aria-label="انستغرام" class="w-10 h-10 md:w-11 md:h-11 bg-primary-800 rounded-full flex items-center justify-center text-primary-400 hover:bg-theqa-gold hover:text-primary-900 transition-all duration-300 hover:scale-110 hover:rotate-6">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
-            <a href="https://wa.me/201090718857" target="_blank" aria-label="واتساب" class="w-10 h-10 md:w-11 md:h-11 bg-[#25D366] rounded-full flex items-center justify-center text-white hover:bg-[#20bd5a] transition-all duration-300 shadow-lg shadow-[#25D366]/30 hover:scale-110 hover:-rotate-6">
+            <a href="https://wa.me/966533000983" target="_blank" aria-label="واتساب" class="w-10 h-10 md:w-11 md:h-11 bg-[#25D366] rounded-full flex items-center justify-center text-white hover:bg-[#20bd5a] transition-all duration-300 shadow-lg shadow-[#25D366]/30 hover:scale-110 hover:-rotate-6">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
                 <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.528 3.659 1.448 5.177L2.25 22l4.835-1.197C8.342 21.472 10.143 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.795 0-3.439-.536-4.842-1.454l-.348-.206-3.547.879.94-3.493-.216-.357A8.034 8.034 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
@@ -170,7 +169,7 @@
           </ul>
         </div>
 
-        <!-- ===== Column 4: Contact ===== -->
+        <!-- ===== Column 4: Contact & Location ===== -->
         <div>
           <h4 class="text-lg md:text-xl font-bold text-white mb-4 flex items-center gap-2">
             <span class="w-1 h-6 bg-theqa-gold rounded-full"></span>
@@ -215,6 +214,23 @@
               </div>
             </li>
           </ul>
+
+          <!-- ===== زر الموقع ===== -->
+          <div class="mt-6 pt-6 border-t border-primary-800/50">
+            <a
+              href="https://maps.app.goo.gl/7JfumvXZYmT1CeUM7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2.5 px-5 py-3 bg-primary-700 hover:bg-primary-600 text-white rounded-xl text-sm font-bold transition-all duration-300 shadow-md hover:shadow-primary-600/30 hover:scale-[1.02] group w-full sm:w-auto justify-center"
+            >
+              <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>عرض الموقع على الخريطة</span>
+            </a>
+            <p class="text-primary-500 text-[10px] mt-2">📍 RRC8+74J Al Qadisiyyah, الرياض</p>
+          </div>
         </div>
       </div>
 
@@ -224,13 +240,7 @@
           <p class="text-primary-400 text-sm text-center md:text-right">
             © 2025 <span class="text-theqa-gold font-bold">ثقة</span> - جميع الحقوق محفوظة
           </p>
-          <div class="flex items-center gap-4 text-primary-500 text-xs">
-            <a href="#" class="hover:text-theqa-gold transition-colors">سياسة الخصوصية</a>
-            <span class="w-px h-4 bg-primary-800"></span>
-            <a href="#" class="hover:text-theqa-gold transition-colors">شروط الاستخدام</a>
-            <span class="w-px h-4 bg-primary-800"></span>
-            <a href="#" class="hover:text-theqa-gold transition-colors">خريطة الموقع</a>
-          </div>
+        
         </div>
       </div>
     </div>

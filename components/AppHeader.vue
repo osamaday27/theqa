@@ -181,8 +181,22 @@
         </ul>
 
         <!-- ===== RIGHT BUTTONS ===== -->
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 sm:gap-3">
           
+          <!-- ===== زر الموقع - ديسكتوب ===== -->
+          <a 
+            href="https://maps.app.goo.gl/7JfumvXZYmT1CeUM7"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden md:flex items-center gap-2 bg-primary-50 hover:bg-primary-100 text-primary-700 hover:text-primary-900 px-3 xl:px-4 py-2 rounded-full text-xs xl:text-sm font-bold transition-all duration-300 hover:scale-105 group"
+          >
+            <svg class="w-4 h-4 xl:w-5 xl:h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span class="hidden xl:inline">الموقع</span>
+          </a>
+
           <!-- زر البحث - موبايل -->
           <button 
             @click="toggleSearchMobile"
@@ -198,9 +212,9 @@
           <a 
             href="https://wa.me/966533000983?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A8%D9%83%D9%85%20%D9%81%D9%8A%20%D8%AB%D9%82%D8%A9%20%D9%84%D9%81%D8%AD%D8%B5%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA" 
             target="_blank"
-            class="hidden sm:flex items-center gap-2 bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white px-4 py-2 rounded-full text-sm font-bold transition-all duration-300"
+            class="hidden sm:flex items-center gap-2 bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white px-3 xl:px-4 py-2 rounded-full text-xs xl:text-sm font-bold transition-all duration-300 hover:scale-105"
           >
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-4 h-4 xl:w-5 xl:h-5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
               <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.528 3.659 1.448 5.177L2.25 22l4.835-1.197C8.342 21.472 10.143 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.795 0-3.439-.536-4.842-1.454l-.348-.206-3.547.879.94-3.493-.216-.357A8.034 8.034 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
             </svg>
@@ -210,7 +224,7 @@
           <!-- طلب الآن -->
           <NuxtLink 
             to="/contact" 
-            class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-theqa-gold to-yellow-500 text-primary-900 px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-theqa-gold/25 hover:shadow-theqa-gold/40 hover:scale-105 transition-all duration-300"
+            class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-theqa-gold to-yellow-500 text-primary-900 px-4 xl:px-6 py-2.5 rounded-full text-xs xl:text-sm font-bold shadow-lg shadow-theqa-gold/25 hover:shadow-theqa-gold/40 hover:scale-105 transition-all duration-300"
           >
             <span>أطلب الآن</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -344,6 +358,23 @@
             >
               تواصل معنا
             </NuxtLink>
+          </li>
+
+          <!-- ===== زر الموقع - موبايل ===== -->
+          <li>
+            <a 
+              href="https://maps.app.goo.gl/7JfumvXZYmT1CeUM7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:text-primary-900 hover:bg-primary-50 rounded-xl transition-all duration-200 font-medium"
+              @click="isOpen = false"
+            >
+              <svg class="w-5 h-5 text-theqa-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>موقعنا على الخريطة</span>
+            </a>
           </li>
 
           <li class="border-t border-gray-100/50 mt-2 pt-2">
