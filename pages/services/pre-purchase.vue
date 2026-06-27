@@ -232,7 +232,7 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: 'المحركات',
-    price: 6500,
+    price: 650,
     items: [
       { label: 'المحرك', included: true },
       { label: 'ناقل الحركة', included: true },
