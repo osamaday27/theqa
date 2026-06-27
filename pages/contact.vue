@@ -61,7 +61,7 @@
                 <p class="text-slate-400 mb-8">سنقوم بالرد عليك في أقرب وقت ممكن</p>
 
                 <form @submit.prevent="handleSubmit" class="space-y-5">
-                  <!-- الاسم -->
+                  <!-- ===== الاسم ===== -->
                   <div class="relative">
                     <label class="block text-slate-300 font-bold mb-2 text-sm">الاسم</label>
                     <div class="relative">
@@ -78,7 +78,7 @@
                     </div>
                   </div>
 
-                  <!-- البريد الإلكتروني -->
+                  <!-- ===== البريد الإلكتروني ===== -->
                   <div class="relative">
                     <label class="block text-slate-300 font-bold mb-2 text-sm">البريد الإلكتروني</label>
                     <div class="relative">
@@ -95,7 +95,7 @@
                     </div>
                   </div>
 
-                  <!-- رقم الجوال -->
+                  <!-- ===== رقم الجوال ===== -->
                   <div class="relative">
                     <label class="block text-slate-300 font-bold mb-2 text-sm">رقم الجوال</label>
                     <div class="relative">
@@ -111,7 +111,7 @@
                     </div>
                   </div>
 
-                  <!-- نوع الخدمة -->
+                  <!-- ===== نوع الخدمة ===== -->
                   <div class="relative">
                     <label class="block text-slate-300 font-bold mb-2 text-sm">نوع الخدمة</label>
                     <div class="relative">
@@ -131,52 +131,50 @@
                       <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </div>
                   </div>
-<!-- ===== الرسالة ===== -->
-<div class="relative">
-  <label class="block text-white/80 font-bold mb-2 text-sm">
-    الرسالة
-    <span class="text-theqa-gold mr-1">*</span>
-  </label>
-  <div class="relative">
-    <span class="absolute right-4 top-4 text-white/30 pointer-events-none">
-      <!-- SVG الصحيح -->
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" 
-              d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/>
-      </svg>
-    </span>
-    <textarea
-      v-model="form.message"
-      rows="4"
-      placeholder="اكتب رسالتك هنا..."
-      class="w-full p-4 pr-12 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-white/30 focus:ring-2 focus:ring-theqa-gold focus:border-theqa-gold/50 focus:bg-white/10 outline-none transition-all duration-300 hover:border-white/20 resize-none"
-      required
-    ></textarea>
-  </div>
-</div>
 
-<!-- ===== تعليق (اختياري) ===== -->
-<div class="relative">
-  <label class="block text-white/80 font-bold mb-2 text-sm">
-    تعليق <span class="text-white/30 text-xs font-normal">(اختياري)</span>
-  </label>
-  <div class="relative">
-    <span class="absolute right-4 top-4 text-white/30 pointer-events-none">
-      <!-- SVG الصحيح -->
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" 
-              d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/>
-      </svg>
-    </span>
-    <textarea
-      v-model="form.comment"
-      rows="3"
-      placeholder="اكتب تعليقك هنا (اختياري)..."
-      class="w-full p-4 pr-12 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-white/30 focus:ring-2 focus:ring-theqa-gold focus:border-theqa-gold/50 focus:bg-white/10 outline-none transition-all duration-300 hover:border-white/20 resize-none"
-    ></textarea>
-  </div>
-</div>
-                  <!-- زر الإرسال بتأثير لمعان -->
+                  <!-- ===== الرسالة ===== -->
+                  <div class="relative">
+                    <label class="block text-slate-300 font-bold mb-2 text-sm">
+                      الرسالة
+                      <span class="text-theqa-gold mr-1">*</span>
+                    </label>
+                    <div class="relative">
+                      <span class="absolute right-4 top-4 text-slate-500 pointer-events-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/>
+                        </svg>
+                      </span>
+                      <textarea
+                        v-model="form.message"
+                        rows="4"
+                        placeholder="اكتب رسالتك هنا..."
+                        class="peer w-full p-4 pr-12 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:ring-2 focus:ring-theqa-gold/60 focus:border-theqa-gold/50 focus:bg-white/[0.07] outline-none transition-all duration-300 hover:border-white/20 resize-none"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <!-- ===== تعليق (اختياري) ===== -->
+                  <div class="relative">
+                    <label class="block text-slate-300 font-bold mb-2 text-sm">
+                      تعليق <span class="text-slate-500 text-xs font-normal">(اختياري)</span>
+                    </label>
+                    <div class="relative">
+                      <span class="absolute right-4 top-4 text-slate-500 pointer-events-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 8h10M7 12h6m-6 8l-3-3H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-6l-3 3z"/>
+                        </svg>
+                      </span>
+                      <textarea
+                        v-model="form.comment"
+                        rows="3"
+                        placeholder="اكتب تعليقك هنا (اختياري)..."
+                        class="peer w-full p-4 pr-12 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder:text-slate-500 focus:ring-2 focus:ring-theqa-gold/60 focus:border-theqa-gold/50 focus:bg-white/[0.07] outline-none transition-all duration-300 hover:border-white/20 resize-none"
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <!-- ===== زر الإرسال بتأثير لمعان ===== -->
                   <button
                     type="submit"
                     :disabled="isSubmitting"
@@ -202,7 +200,7 @@
                     enter-from-class="opacity-0 -translate-y-1"
                     enter-to-class="opacity-100 translate-y-0"
                   >
-                    <div v-if="successMessage" class="flex items-center gap-2.5 p-4 bg-theqa-mint/10 border border-theqa-mint/30 rounded-xl text-theqa-mint font-medium">
+                    <div v-if="successMessage" class="flex items-center gap-2.5 p-4 bg-green-500/10 border border-green-500/30 rounded-xl text-green-400 font-medium">
                       <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75l1.5 1.5L15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                       {{ successMessage }}
                     </div>
@@ -299,7 +297,7 @@
                 class="relative inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3 rounded-full font-bold transition-all duration-300 hover:scale-105 shadow-lg shadow-[#25D366]/30"
               >
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5 -.669 -.51 -.173 -.008 -.371 -.01 -.57 -.01 -.198 0 -.52 .074 -.79２ .3７２ -.２７２ .２９７ -１．０４ １．０１６ -１．０４ ２．４７９ ０ １．４６２ １．０６５ ２．８７５ １．２１３ ３．０７４．１４９．１９８ ２．０９６ ３．２ ５．０７７ ４．４８７．７０９．３０６ １．２６２．４８９ １．６９４．６２５．７１２．２２７ １．３６．１９５ １．８７１．１１８．５７１－．０８５ １．７５８－．７１９ ２．００６－１．４１３．２４８－．６９４．２４８－１．２８９．１７３－１．４¹³－．０⁷⁴－．¹²⁴－．²⁷²－．¹⁹⁸－．⁵⁷－．³⁴⁷z"/>
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
                   <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.528 3.659 1.448 5.177L2.25 22l4.835-1.197C8.342 21.472 10.143 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.795 0-3.439-.536-4.842-1.454l-.348-.206-3.547.879.94-3.493-.216-.357A8.034 8.034 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
                 </svg>
                 واتساب
@@ -313,7 +311,9 @@
 </template>
 
 <script setup lang="ts">
+// ===== استيراد Vue =====
 import { ref } from 'vue'
+
 // ===== تعريف الواجهات =====
 interface ContactForm {
   name: string
@@ -321,6 +321,7 @@ interface ContactForm {
   phone: string
   service: string
   message: string
+  comment: string
 }
 
 interface ApiResponse {
@@ -335,7 +336,8 @@ const form = ref<ContactForm>({
   email: '',
   phone: '',
   service: '',
-  message: ''
+  message: '',
+  comment: ''
 })
 
 const isSubmitting = ref<boolean>(false)
@@ -355,20 +357,21 @@ const handleSubmit = async (): Promise<void> => {
     })
 
     if (response.success) {
-      successMessage.value = 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.'
+      successMessage.value = '✅ تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.'
       // إعادة تعيين النموذج
       form.value = {
         name: '',
         email: '',
         phone: '',
         service: '',
-        message: ''
+        message: '',
+        comment: ''
       }
     } else {
-      errorMessage.value = response.message || 'حدث خطأ أثناء الإرسال'
+      errorMessage.value = '❌ ' + (response.message || 'حدث خطأ أثناء الإرسال')
     }
   } catch (error: any) {
-    errorMessage.value = error.message || 'حدث خطأ في الاتصال بالخادم'
+    errorMessage.value = '❌ ' + (error.message || 'حدث خطأ في الاتصال بالخادم')
     console.error('Error submitting form:', error)
   } finally {
     isSubmitting.value = false
