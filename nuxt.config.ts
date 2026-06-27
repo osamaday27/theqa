@@ -65,13 +65,7 @@ export default defineNuxtConfig({
     typeCheck: false,
     shim: false
   },
-
-  // ===== NITRO =====
-  nitro: {
-    compressPublicAssets: true,
-    minify: true,
-    preset: ''
-  },
+  
 
   // ===== RUNTIME CONFIG =====
   runtimeConfig: {
