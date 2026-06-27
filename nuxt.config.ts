@@ -1,18 +1,20 @@
-// https://nuxt.com
+// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   
-  // المكتبات وموديولات المشروع
+  // ===== MODULES =====
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts'
   ],
 
-  // ملف التخصيصات الإضافية للـ CSS
+  // ===== CSS =====
   css: ['~/assets/css/main.css'],
 
-  // الإعدادات العامة لهيكل وتأمين صفحات الموقع (SEO)
+  // ===== APP CONFIG =====
   app: {
     head: {
       htmlAttrs: {
@@ -40,52 +42,56 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
       ]
     },
-    // تفعيل الحركات الانتقالية بين الصفحات بسلاسة
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' }
   },
 
-  // ربط موديول Tailwind بملف الإعدادات المخصص
-   tailwindcss: {
-    configPath: 'tailwind.config.js',
-    exposeConfig: true,
-    viewer: true
-  }, 
-
+  // ===== GOOGLE FONTS =====
   googleFonts: {
     families: {
-      Tajawal: [400, 600, 700],
-      Cairo: [400, 600, 700]
+      'Tajawal': [400, 500, 700, 800, 900],
+      'Cairo': [400, 600, 700]
     },
     display: 'swap',
     prefetch: true,
-    preconnect: true
-  },
-  // تدقيق ومراقبة الأنواع في TypeScript
-  typescript: {
-    strict: true,
-    typeCheck: false // اتركها false لتفادي مشاكل الحزم الإضافية وسرعة تشغيل السيرفر محليًا
+    preconnect: true,
+    download: true,
+    base64: false
   },
 
-  // إعدادات محرك Nitro لضغط وتحسين أداء الموقع عند الإنتاج النهائي
+  // ===== TYPESCRIPT =====
+  typescript: {
+    strict: true,
+    typeCheck: false,
+    shim: false
+  },
+
+  // ===== NITRO =====
   nitro: {
     compressPublicAssets: true,
     minify: true,
     preset: 'node-server'
   },
 
-  // متغيرات البيئة والربط التلقائي بـ ملف .env
+  // ===== RUNTIME CONFIG =====
   runtimeConfig: {
     public: {
       siteName: 'ثقة',
       siteUrl: 'https://theqa.com',
-      apiBase: '/api' // سيقوم Nuxt تلقائيًا بقراءتها من NUXT_PUBLIC_API_BASE داخل الـ .env إن وجدت
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || '/api'
     }
   },
 
-  // ميزات تجريبية لتحسين كتابة الكود والتصفح الفوري داخل التطبيق
+  // ===== EXPERIMENTAL =====
   experimental: {
     typedPages: true,
     payloadExtraction: true
+  },
+
+  // ===== VITE =====
+  vite: {
+    optimizeDeps: {
+      include: ['vue', 'vue-router']
+    }
   }
 })
